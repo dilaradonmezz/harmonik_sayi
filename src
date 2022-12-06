@@ -1,0 +1,24 @@
+//Harmonik sayı
+// 1 + (1/2) + (1/3) + (1/4) + ......
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class harmonik_seri {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        DecimalFormat df= new DecimalFormat("##.##");
+        
+        int sayi;
+        double toplam=0.0;
+        System.out.println("Sayı girin: ");
+        sayi=sc.nextInt();
+
+        for(double i=1; i<=sayi; i++)
+            toplam+=1/i;
+
+        //toplam=Double.valueOf(toplam);
+        System.out.println(df.format(toplam));
+        
+    }
+}
